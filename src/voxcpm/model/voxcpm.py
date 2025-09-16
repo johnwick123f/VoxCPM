@@ -602,4 +602,4 @@ class VoxCPMModel(nn.Module):
         for kw, val in vae_state_dict.items():
             model_state_dict[f"audio_vae.{kw}"] = val
         model.load_state_dict(model_state_dict, strict=True)
-        return model.to(model.device).eval().optimize()
+        return model.to(model.device).eval()
